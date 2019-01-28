@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<servlet>
+		<servlet-name>ActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.ActorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>FilmServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.FilmServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.DirectorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FilmActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.FilmActorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RecoveryAddFilmServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.RecoveryAddFilmServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FillFilmActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.FillFilmActorServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>searchRoleServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.SearchRoleServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>searchActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.SearchActorServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ActorServlet</servlet-name>
+		<url-pattern>/actor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FilmServlet</servlet-name>
+		<url-pattern>/film</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DirectorServlet</servlet-name>
+		<url-pattern>/director</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FilmActorServlet</servlet-name>
+		<url-pattern>/filmActor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RecoveryAddFilmServlet</servlet-name>
+		<url-pattern>/recoveryFilm</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FillFilmActorServlet</servlet-name>
+		<url-pattern>/fillFilmActor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>searchRoleServlet</servlet-name>
+		<url-pattern>/searchRole</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>searchActorServlet</servlet-name>
+		<url-pattern>/searchActor</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
