@@ -1,15 +1,31 @@
 package es.salesianos.model;
 
-public class Director extends BaseEntity{
+import java.util.List;
+
+public class Director {
+	private Integer cod;
+	private String name;
+
+	public Integer getCod() {
+		return cod;
+	}
+	public void setCod(Integer cod) {
+		this.cod = cod;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	
-	private String nombre;
+	private List<Film> peliculas;
 
-	public String getNombre() {
-		return nombre;
+	public List<Film> getPeliculas() {
+		return peliculas;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setPeliculas(List<Film> peliculas) {
+		this.peliculas = peliculas;
 	}
-
 }
