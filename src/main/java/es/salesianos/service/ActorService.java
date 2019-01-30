@@ -3,31 +3,10 @@ package es.salesianos.service;
 import java.util.List;
 
 import es.salesianos.model.Actor;
-import es.salesianos.repository.Repository;
-
+import es.salesianos.repository.ActorRepository;
 
 public class ActorService {
-	private Repository repository = new Repository();
-
-	public Repository getRepository() {
-		return repository;
-	}
-
-	public void setRepository(Repository repository) {
-		this.repository = repository;
-	}
-	
-	public List<Actor> listAllActors() {
-		return repository.searchAllActors();
-	}
-
-	public void searchAndDeleteActor(Integer codActor) {
-		repository.searchAndDeleteActor(codActor);
-	}
-
-	public void addActor(Actor actor) {
-		repository.insert(actor);
-	}
+	private ActorRepository repository = new ActorRepository();
 
 	public List<Actor> filterAllActor(int beginDate, int endDate) {
 		return repository.filterAllActor(beginDate, endDate);
@@ -36,8 +15,15 @@ public class ActorService {
 	public List<Actor> selectAllActor() {
 		return repository.selectAllActor();
 	}
-
-	public Actor filterAllDirector(String name) {
-		return repository.filterAllDirector(name);
+	
+	public void insert(Actor actor) {
+		repository.insert(actor);
+	}
+	
+	public void delete(String codString) {
+		Actor actor = new Actor();
+		int cod = Integer.parseInt(codString);
+		actor.setCod(cod);
+		repository.delete(actor);
 	}
 }

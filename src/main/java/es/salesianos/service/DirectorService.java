@@ -3,33 +3,27 @@ package es.salesianos.service;
 import java.util.List;
 
 import es.salesianos.model.Director;
-import es.salesianos.repository.Repository;
-
+import es.salesianos.repository.DirectorRepository;
 
 public class DirectorService {
-	private Repository repository = new Repository();
+	DirectorRepository repository = new DirectorRepository();
 
-	public Repository getRepository() {
-		return repository;
-	}
-
-	public void setRepository(Repository repository) {
-		this.repository = repository;
+	public List<Director> selectAllDirector() {
+		return repository.selectAllDirector();
 	}
 	
-	public List<Director> listAllDirectors() {
-		return repository.searchAllDirectors();
+	public void insert(Director director) {
+		repository.insert(director);
 	}
-
 	
-	public void searchAndDeleteDirector(Integer codDirector) {
-		repository.searchAndDeleteDirector(codDirector);
+	public void delete(String codString) {
+		Director director = new Director();
+		int cod = Integer.parseInt(codString);
+		director.setCod(cod);
+		repository.delete(director);
 	}
 
-
-	public void addDirector(Director director) {
-		repository.insertDirector(director);
+	public Director filterAllDirector(String name) {
+		return repository.filterAllDirector(name);
 	}
-
-
 }

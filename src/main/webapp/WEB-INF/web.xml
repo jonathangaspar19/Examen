@@ -1,135 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_1.xsd" version="3.1">
-  <display-name>HelloWorld </display-name>
-  <description>
-		Vaya cacao
-	</description>
-  <servlet>
-    <servlet-name>listadoActores</servlet-name>
-    <servlet-class>es.salesianos.servlet.ListadoServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>listadoDirectores</servlet-name>
-    <servlet-class>es.salesianos.servlet.ListadoServletDirectores
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<servlet>
+		<servlet-name>ActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.ActorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>FilmServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.FilmServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.DirectorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FilmActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.FilmActorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RecoveryAddFilmServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.RecoveryAddFilmServlet
 		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>listadoPeliculas</servlet-name>
-    <servlet-class>es.salesianos.servlet.ListadoServletPeliculas
+	</servlet>
+
+	<servlet>
+		<servlet-name>FillFilmActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.FillFilmActorServlet
 		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>AddActorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.AddActorServlet
+	</servlet>
+
+	<servlet>
+		<servlet-name>searchRoleServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.SearchRoleServlet
 		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>AddDirectorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.AddDirectorServlet
+	</servlet>
+
+	<servlet>
+		<servlet-name>searchActorServlet</servlet-name>
+		<servlet-class>es.salesianos.servlet.SearchActorServlet
 		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>AddPeliculaServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.AddPeliculaServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>DeleteActorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.DeleteActorServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>DeletePeliculaServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.DeletePeliculaServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>DeleteDirectorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.DeleteDirectorServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>PeliculaActorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.PeliculaActorServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>RecoveryAddFilmServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.RecoveryAddFilmServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>FillPeliculaActorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.FillPeliculaActorServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>characterSearcherServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.CharacterSearcherServlet
-		</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>buscadorActorServlet</servlet-name>
-    <servlet-class>es.salesianos.servlet.BuscadorActorServlet
-		</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AddActorServlet</servlet-name>
-    <url-pattern>AddActor</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>listadoActores</servlet-name>
-    <url-pattern>cargarListadoActores</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>listadoDirectores</servlet-name>
-    <url-pattern>cargarListadoDirectores</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>listadoPeliculas</servlet-name>
-    <url-pattern>cargarListadoPeliculas</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>DeleteActorServlet</servlet-name>
-    <url-pattern>/deleteActor</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>DeleteDirectorServlet</servlet-name>
-    <url-pattern>/deleteDirector</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>DeletePeliculaServlet</servlet-name>
-    <url-pattern>/deletePelicula</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AddPeliculaServlet</servlet-name>
-    <url-pattern>AddPelicula</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AddDirectorServlet</servlet-name>
-    <url-pattern>AddDirector</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>PeliculaActorServlet</servlet-name>
-    <url-pattern>/peliculaactor</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>RecoveryAddFilmServlet</servlet-name>
-    <url-pattern>/recoveryFilm</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>FillPeliculaActorServlet</servlet-name>
-    <url-pattern>/fillPeliculaActor</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>characterSearcherServlet</servlet-name>
-    <url-pattern>/characterSearcher</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>buscadorActorServlet</servlet-name>
-    <url-pattern>/buscadorActor</url-pattern>
-  </servlet-mapping>
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ActorServlet</servlet-name>
+		<url-pattern>/actor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FilmServlet</servlet-name>
+		<url-pattern>/film</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DirectorServlet</servlet-name>
+		<url-pattern>/director</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FilmActorServlet</servlet-name>
+		<url-pattern>/filmActor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RecoveryAddFilmServlet</servlet-name>
+		<url-pattern>/recoveryFilm</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FillFilmActorServlet</servlet-name>
+		<url-pattern>/fillFilmActor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>searchRoleServlet</servlet-name>
+		<url-pattern>/searchRole</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>searchActorServlet</servlet-name>
+		<url-pattern>/searchActor</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

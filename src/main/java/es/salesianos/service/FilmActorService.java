@@ -1,30 +1,18 @@
 package es.salesianos.service;
 
 
-
-import es.salesianos.model.FilmActors;
-import es.salesianos.repository.Repository;
+import es.salesianos.model.DtoActorFilm;
+import es.salesianos.model.FilmActor;
+import es.salesianos.repository.FilmActorRepository;
 
 public class FilmActorService {
-
-	private Repository repository = new Repository();
-
-	public Repository getRepository() {
-		return repository;
-	}
-
-	public void setRepository(Repository repository) {
-		this.repository = repository;
+	FilmActorRepository repository = new FilmActorRepository();
+	
+	public DtoActorFilm filterAllFilmActor(String role) {
+		return repository.filterAllFilmActor(role);
 	}
 	
-	public void insertFilmActor(FilmActors peliculaActor) {
-		repository.insert(peliculaActor);
-		;
+	public void insert(FilmActor filmActor) {
+		repository.insert(filmActor);
 	}
-
-	public FilmActors filterAllPeliculaActor(String role) {
-		return repository.filterAllPeliculaActor(role);
-	}
-
-
 }
