@@ -11,9 +11,6 @@
 </head>
 <body>
 
-<%
-List<Film> listAllFilms = (List<Film>)request.getAttribute("listAllFilms");
-%>
 	
 <table border="1">
 	<thead>
@@ -28,7 +25,7 @@ List<Film> listAllFilms = (List<Film>)request.getAttribute("listAllFilms");
 			<tr>
 				<td><c:out value="${film.cod}"/> </td>
 				<td><c:out value="${film.title}"/> </td>
-				<td><a href="/recoveryFilm?codFilm=${film.cod}">Link</a></td>
+				<td><a href="/recoveryFilm?cod=${film.cod}">Link</a></td>
 	    	</tr>
 		</c:forEach>
 	</tbody>

@@ -12,7 +12,6 @@
 </head>
 <body>
 
-	<% List<Actor> listAllActors = (List<Actor>) request.getAttribute("listAllActors"); %>
 
 	<form action="/actor" method="post">
 		<span>name:</span><input type="text" name="name"><br />

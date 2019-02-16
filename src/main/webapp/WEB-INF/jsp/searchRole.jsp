@@ -11,32 +11,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-
-	<%
-		Director listFilterDirector = (Director) request.getAttribute("listFilterDirector");
-	%>
-
-	<form action="/searchActor" method="post">
-		<span>Search Actor: <input type="text" name="name"></span> <br />
-		<input type="submit">
+	
+	<form action="/filterRole" method="post">
+	<span>Search by role: <input type="text" name="role"></span>
+	<br />
+	<input type="submit">
 	</form>
 	<br />
 	<br />
-
+	
 	<table border="1">
 		<thead>
 			<tr>
-				<td>Director</td>
+				<td>Film</td>
+				<td>Actor's Name</td>
+				<td>Bithdate</td>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<c:forEach var="name" items="${listFilterDirector.name}">
-					<tr>
-						<td><c:out value="${name}" /></td>
-					</tr>
-				</c:forEach>
-			</tr>
+				<tr>
+					<td><c:out value="${selectFilmActor.title}" /></td>
+					<td><c:out value="${selectFilmActor.name}" /></td>
+					<td><c:out value="${selectFilmActor.year}" /></td>
+				</tr>
 		</tbody>
 	</table>
 
